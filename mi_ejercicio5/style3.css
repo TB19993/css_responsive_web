@@ -1,0 +1,15 @@
+*{margin: 0; padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+    text-decoration: none;}
+    body{margin-top: 30px; margin-bottom: 30px;}
+    .grilla{display: grid; height: 100vh; grid-template-rows: auto auto auto auto; grid-template-columns: repeat(4, 1fr);grid-template-areas:"h h h h" "s c c ch""s c c ch""f f f f";}
+    .grilla>div{padding: 20px;text-align: center;}
+.header{grid-area: h; text-align: center;border: chocolate 5px solid;background-color: blue;}
+.sidebar{grid-area: s;text-align: center;border: chartreuse 5px solid;background-color: aqua;}
+.content{grid-area: c;text-align: center;border: cornflowerblue 5px solid;background-color: blueviolet;}
+.chat{grid-area: ch;text-align: center;border: cornsilk 5px solid;background-color: brown;}
+.footer{grid-area: f;text-align: center;border: coral 5px solid;background-color: beige;} 
+@media screen and (max-width: 600px) {
+.grilla{display: grid;grid-template-columns: 1fr;grid-template-rows: repeat(6, 1fr); grid-template-areas: "h" "s" "c" "ch" "f";}    
+}
